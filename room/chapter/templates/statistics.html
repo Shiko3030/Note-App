@@ -1,0 +1,115 @@
+{% extends 'main.html' %}
+
+
+
+
+
+{% block content %}
+
+
+<br>
+<div class="row">
+    <div class="col-5" style="margin-left: 100px; margin-bottom: 50px;"> 
+        <div class="card text-center">
+            <div class="card-header" style="background-color:  #4FC3A1; font-size: large;" >
+              Total Of Studentes
+            </div>
+            <div class="card-body" >
+              <h5 class="card-title">{{total_studentes}} Studentes</h5>
+            </div>
+            <div class="card-footer text-body-secondary"style="background-color:  #4FC3A1; ">
+              Total Studentes At The School
+            </div>
+          </div>
+    </div>
+
+      <br>
+    <div class="col-5"> 
+        <div class="card text-center">
+            <div class="card-header"style="background-color:  #4FC3A1; font-size: large;">
+                Total Of Techeres
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">{{total_techeres}} Techeres</h5>
+            </div>
+            <div class="card-footer text-body-secondary"style="background-color:  #4FC3A1;">
+                Total Techeres At The School
+            </div>
+          </div>
+          
+    </div>
+
+    <br>
+
+    <div class="col-5" style="margin-left: 100px;"> 
+      <div class="card text-center">
+          <div class="card-header" style="background-color:  #4FC3A1; font-size: large;" >
+             Total Student Payments
+
+          </div>
+          <div class="card-body" >
+            <h5 class="card-title">{{total_amount}} </h5>
+          </div>
+          <div class="card-footer text-body-secondary"style="background-color:  #4FC3A1; ">
+             Total Student Payments At The School
+          </div>
+        </div>
+  </div>
+
+
+
+
+  <div class="col-5"> 
+    <div class="card text-center">
+        <div class="card-header"style="background-color:  #4FC3A1; font-size: large; ">
+          Total Salaries Of Teachers
+
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{total_salary}}</h5>
+        </div>
+        <div class="card-footer text-body-secondary"style="background-color:  #4FC3A1;">
+          Total Salaries Of Teachers At The School
+        </div>
+      </div>
+  </div>
+  </div>
+
+
+  <div class="col-5" style="margin-top: 50px; margin-left: 28%;"> 
+    <div class="card text-center">
+        <div class="card-header"style="background-color:  #4FC3A1; font-size: large;  ">
+          Total Net profit
+
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{total_net_profit}}</h5>
+        </div>
+        <div class="card-footer text-body-secondary"style="background-color:  #4FC3A1;">
+          Total Net profit Of Teachers At The School
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+
+
+
+      
+</div>
+
+
+
+
+    
+</div>
+
+
+
+
+
+
+
+{% endblock %}

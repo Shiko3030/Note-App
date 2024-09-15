@@ -1,0 +1,31 @@
+{% extends 'main.html' %}
+    
+
+    
+
+
+    {% block content %}
+
+
+    <hr>
+     
+
+    <div class="col-5"style="margin-left:29.5% ; ">
+      <div class="card card-body" style="background-color: #34495e;">
+      <h2>Are you sure you want delet !</h2>
+      <form method="post">
+        {% csrf_token %}
+        <button style="margin-left: 40%;" type="submit" class="btn btn-danger">Delete</button>
+      </form>
+      
+        
+      </div>
+    
+    </div>
+    
+
+    {% endblock %}
+
+
+
+ 

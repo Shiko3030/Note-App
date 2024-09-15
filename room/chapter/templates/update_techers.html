@@ -1,0 +1,31 @@
+{% extends 'main.html' %}
+    
+
+    {% block content %}
+
+    <hr>
+
+    <h2>Add New Techer</h2>
+    <div class="col-5"style="margin-left:29.5% ; ">
+      <div class="card card-body" style="background-color: #34495e;">
+        <form method="post">
+          {% csrf_token %}
+          <h3 style=" margin-left: 10px; font-size: 25px; color:#1abc9c;">Name {{form.name}} </h3> 
+          <h3 style=" margin-left: 10px; margin-top: 18px; font-size: 25px; color:#1abc9c;">BirthDay {{form.birthday}}</h3>
+          <h3 style=" margin-left: 10px; margin-top: 18px;  font-size: 25px; color:#1abc9c;">Adress {{form.adress}} </h3> 
+          <h3 style=" margin-left: 10px; margin-top: 18px;  font-size: 25px; color:#1abc9c;">Type {{form.type}}</h3>
+          <h3 style=" margin-left: 10px; margin-top: 18px;  font-size: 25px; color:#1abc9c;">Email {{form.email}} </h3> 
+          <h3 style=" margin-left: 10px; margin-top: 18px;  font-size: 25px; color:#1abc9c;">Specialization {{form.specialization}} </h3> 
+          <h3 style=" margin-left: 10px; margin-top: 18px;  font-size: 25px; color:#1abc9c;">Phone {{form.phone}}</h3>
+          <h3 style=" margin-left: 10px; margin-top: 18px;  font-size: 25px; color:#1abc9c;">Salary {{form.salary}}</h3>
+          <button type="submit" class="btn btn-warning" style="float: left; margin-top: 18px;  margin-left: 43%; font-size: 15px;">Submit</button>
+        </form>
+        
+      </div>
+    
+    </div>
+    
+
+    {% endblock %}
+
+

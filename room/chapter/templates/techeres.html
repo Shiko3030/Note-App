@@ -1,0 +1,56 @@
+{% extends 'main.html' %}
+
+
+
+    {% block content %}
+
+    <hr>
+
+
+    <h2>Techeres</h2>
+    <div class="row">
+      <div class="col" >
+        <h3 style="float: left; margin-left: 5.5%; font-size: 30px; color: white;">Add Techers: </h3> 
+        <a style="float: left; margin-left: 15px;" href="{% url 'add_techeres' %}" type="button" class="btn btn-warning">Add</a>
+
+        <form method="get">
+          {% csrf_token %}
+        <h3 style="float: left; margin-left: 10px; font-size: 30px; color: white;">Searsh: </h3> 
+        <h3 style="float: left; margin-left: 10px; font-size: 25px; color:#1abc9c;">Name {{myFilter.form.name}} </h3> 
+        <h3 style="float: left; margin-left: 10px; font-size: 25px; color:#1abc9c;">Majour {{myFilter.form.specialization}}</h3>
+        <button type="submit" class="btn btn-warning" style="float: left; margin-left: 10px; font-size: 15px;">Searsh</button>
+        </form>
+
+      </div>
+    </div>
+    <div class="table-wrapper">
+        <table class="fl-table">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Birth Day</th>
+                <th>Adress</th>
+                <th>Specialization</th>
+                <th>Phone</th>
+                <th>Update</th>
+                <th>Remove</th>
+            </tr>
+            </thead>
+            <tbody>
+                {% for i in techeres %}
+            <tr>
+                <td>{{i.name}}</td>
+                <td>{{i.birthday}}</td>
+                <td>{{i.adress}}</td>
+                <td>{{i.specialization}}</td>
+                <td>{{i.phone}}</td>
+                <td><a   href="{% url 'update_techers' i.id %}" type="button" class="btn btn-warning">Update</a></td>
+                <td><a href="{% url 'delete' i.id %}" type="button" class="btn btn-danger">Remove</a></td>
+            </tr>
+            {% endfor %}
+            <tbody>
+        </table>
+    </div>
+    {% endblock %}
+
+

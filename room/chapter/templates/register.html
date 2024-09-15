@@ -1,0 +1,22 @@
+<h1>register</h1>
+
+
+
+<form method="post">
+    {% csrf_token %}
+ <h4>Enter User name</h4>
+    {{form.username}}
+    <h4>Enter email</h4>
+    {{form.email}}
+    <h4>Enter password</h4>
+    {{form.password1}}
+    <h4>repassword</h4>
+    {{form.password2}}
+
+    <button type="submit">Submit</button>
+
+
+</form>
+
+
+<a href="{% url 'login' %}">login</a>
