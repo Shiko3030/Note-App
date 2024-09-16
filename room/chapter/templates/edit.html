@@ -1,0 +1,45 @@
+{% extends 'main.html' %}
+
+<body>
+    {% block content %}
+    <br>
+     <h1 style="text-align: center;">Edit Your Note</h1>
+<br>
+     <div class="container">
+
+        <div class="col-6" style="margin-left: 25%;" >
+            <form method="post">
+                {% csrf_token %}
+
+                <div class="card card-body" style="background-color: #d2b48c;" >
+
+
+                    <h3 style="text-align: center; color:brown">Name</h3>
+                    {{form.name}}
+                    <hr>
+                    <h3 style="text-align: center; color:brown">Note</h3>
+                    {{form.note}}
+                    <br>
+                    <button type="submit" class="btn " style="background-color: antiquewhite;">Done</button>
+
+                
+                </div>
+
+                
+                </div>
+           
+            </form>
+
+        </div>
+
+     </div>
+
+      {% endblock %}
+    </body>
+
+
+   
+
+ 
+
+</html>

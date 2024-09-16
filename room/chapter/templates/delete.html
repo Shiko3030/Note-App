@@ -1,0 +1,39 @@
+{% extends 'main.html' %}
+
+
+
+<body>
+    {% block content %}
+
+    <br>
+     <h1 style="text-align: center; color:brown;" >Are You Sure You Want Delete ? </h1>
+<br>
+     <div class="container">
+
+        <div class="col-6" style="margin-left: 25%;" >
+            <form method="post">
+                {% csrf_token %}
+
+                <div class="card card-body" style="background-color: #d2b48c;">
+                    <a class="btn" style="background-color: antiquewhite;" href="{% url ''  %}" >Cancel</a>
+                    <br>
+                    <input class="btn "  style="background-color: antiquewhite;" type="submit" name="confirm">
+                    
+                </div>
+
+           
+            </form>
+
+        </div>
+
+     </div>
+
+
+
+        
+     
+
+     {% endblock %}
+
+    </body>
+

@@ -1,0 +1,76 @@
+{% extends 'main.html' %}
+
+
+
+
+<body>
+    {% block content %}
+    <br>
+     <h1 style="text-align: center; color:brown; font-style: oblique; " >Your Notes</h1>
+
+     <br>
+
+
+
+     <div class="col-5" style="margin-left: 29%;" >
+        <form method="get">
+            {% csrf_token %}
+
+            <div class="card card-body" style="background-color: #d2b48c;">
+                <label style="text-align: center; color:brown; font-size: larger; font-style: oblique; ">Enter Name Of Note</label>
+                {{searsh.form.name}}
+                <button type="submit" class="btn " style="background-color: antiquewhite;">Searsh</button>
+            </div>
+
+       
+        </form>
+
+    </div>
+
+
+<br>
+     <div class="container" >
+
+        <div class="col-6" style="margin-left: 25%;" >
+            <form method="post">
+                {% csrf_token %}
+
+                <div class="card card-body" style="background-color: #d2b48c; font-style: oblique;">
+
+
+                    <table class="table table-sm">
+
+                        <tr>
+                            <th  style="background-color: antiquewhite;" >Name</th>
+                            <th  style="background-color: antiquewhite;" >Date</th>
+                            <th  style="background-color: antiquewhite;" >Edit</th>
+                            <th  style="background-color: antiquewhite;" >Delete</th>
+                        </tr>
+{% for i in notes %}
+                        <tr>
+                            <td >{{i.name}}</td>
+                            <td >{{i.date}}</td>
+                            <td><a class="btn" style="background-color: antiquewhite;" href="{% url 'edit' i.id %}" >Edit</a></td>
+                            <td><a class="btn" style="background-color: antiquewhite;" href="{% url 'delete' i.id %}" >Delete</a></td>
+                        </tr>
+{% endfor %}
+                        
+                    </table>
+                    <a class="btn" style="background-color: antiquewhite;" href="{% url 'add_note'  %}" >Add New Note</a>
+                </div>
+
+           
+            </form>
+
+        </div>
+
+     </div>
+
+
+
+
+     {% endblock %}
+
+    </body>
+
+

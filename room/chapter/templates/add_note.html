@@ -1,0 +1,47 @@
+{% extends 'main.html' %}
+
+
+
+
+
+
+
+<body>
+    {% block content %}
+
+    <br>
+     <h1 style="text-align: center; color: brown;">Write Your Notes Here</h1>
+<br>
+     <div class="container">
+
+        <div class="col-6" style="margin-left: 25%;" >
+            <form method="post">
+                {% csrf_token %}
+
+                <div class="card card-body" style="background-color: #d2b48c;" >
+
+
+                    <h3 style="text-align: center; color:brown">Name</h3>
+                    {{form.name}}
+                    <hr>
+                    <h3 style="text-align: center; color:brown">Note</h3>
+                    {{form.note}}
+                    <br>
+                    <button type="submit" class="btn " style="background-color: antiquewhite;">Done</button>
+
+                
+                </div>
+           
+            </form>
+
+        </div>
+
+     </div>
+
+
+
+        
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+      {% endblock %}
+    </body>
+

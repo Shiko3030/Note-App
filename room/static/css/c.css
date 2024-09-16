@@ -1,0 +1,23 @@
+body {
+    background-color:azure;
+}
+
+#total-orders {
+    background-color: #3d7eb4;
+}
+
+#orders-delivered {
+    background-color: #54dab8;
+}
+
+#orders-pending {
+    background-color: #900dfc;
+}
+#bt{
+    color: antiquewhite;
+}
+.navbar-logo {
+    max-height: auto; /* عدّل هذا القيمة لتتناسب مع ارتفاع الشريط العلوي */
+    width: 100px;
+    object-fit: contain;
+}
