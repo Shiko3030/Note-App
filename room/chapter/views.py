@@ -22,7 +22,7 @@ def add_note (request):
 
 
 
-def home(request ):
+def index(request ):
     notes =Note.objects.all()
 
     searsh = NoteFilter(request.GET , queryset=notes )
@@ -35,7 +35,7 @@ def home(request ):
         'notes':notes
 
     }
-    return render(request , 'home.html',context)
+    return render(request , 'index.html',context)
 
 
 
